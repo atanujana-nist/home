@@ -68,6 +68,27 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
+  /* Profile Photo Styling */
+header .profile-photo {
+  margin: 15px auto;
+  text-align: center;
+}
+
+header .profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-blue);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .profile-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+}
+  
   header::before {
     content: '';
     position: absolute;
@@ -1661,6 +1682,11 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header>
+
+  <!-- ADD THIS PROFILE PHOTO SECTION -->
+  <div class="profile-photo">
+    <img src="atanu.jpg" alt="Atanu Jana - Profile Photo">
+  </div>
   <h1>ATANU JANA</h1>
   <p>Embedded AI & Machine Intelligence Solutions</p>
   <div class="contact-info">
@@ -1688,7 +1714,7 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <h2>EMBEDDED INTELLIGENCE SOLUTIONS</h2>
+    <h2>Embedded AI & Machine Intelligence Solutions</h2>
     <p>Bridging hardware and AI to solve real-world challenges through innovative engineering.</p>
     <div class="hero-links">
       <a href="#marketplacePage" onclick="showPage('marketplace'); return false;">
@@ -2302,6 +2328,7 @@
     <a href="mailto:atanu.jana.ece.2023@nist.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </div>
   <p>&copy; 2025 Atanu Jana. Embedded AI & Machine Intelligence Solutions.</p>
+  <p>Developed by <a href="https://www.linkedin.com/in/atanu1108" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">Atanu Jana</a></p>
 </footer>
 
 </body>
