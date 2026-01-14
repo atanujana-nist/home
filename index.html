@@ -832,26 +832,63 @@
 
         @media (max-width: 768px) {
             nav {
-                bottom: 20px;
+                bottom: 15px;
                 top: auto;
                 width: 95%;
-                padding: 10px 15px;
-                flex-direction: column;
-                gap: 10px;
+                padding: 10px 0;
+                flex-direction: row;
+                justify-content: center;
+                background: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(20px);
+                border-radius: 20px;
+                box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-logo {
+                display: none;
             }
 
             .nav-links {
                 width: 100%;
-                justify-content: space-around;
+                justify-content: space-evenly;
+                gap: 0;
+                padding: 0 10px;
             }
 
             .nav-links a {
                 padding: 8px 10px;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                border: none;
+                background: transparent !important;
+                box-shadow: none !important;
+                color: var(--text-muted);
+            }
+
+            .nav-links a.active {
+                color: var(--primary-blue);
+            }
+
+            .nav-links a.active::after {
+                top: -5px;
+                bottom: auto;
+                width: 50%;
+                left: 25%;
+                background: var(--primary-blue);
+                box-shadow: 0 0 10px var(--primary-blue);
+                border-radius: 2px;
+            }
+
+            .nav-links a i {
+                font-size: 1.2rem;
+                margin-bottom: 2px;
             }
 
             main {
-                margin-top: 40px;
+                margin-top: 20px;
                 margin-bottom: 120px;
             }
 
@@ -881,6 +918,66 @@
             .ring-3 {
                 width: 240px;
                 height: 240px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.1rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .profile-container {
+                width: 200px;
+                height: 200px;
+                margin-top: 20px;
+            }
+
+            .ring-1 {
+                width: 220px;
+                height: 220px;
+            }
+
+            .ring-2 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .ring-3 {
+                width: 190px;
+                height: 190px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .site-footer {
+                padding-bottom: 100px;
+            }
+
+            .nav-links a {
+                font-size: 0.6rem;
+            }
+
+            .nav-links a i {
+                font-size: 1.1rem;
             }
         }
 
@@ -1111,9 +1208,12 @@
     <nav>
         <div class="nav-logo">AJ.TECH</div>
         <div class="nav-links">
-            <a href="#" onclick="showPage('projects'); return false;" id="nav-projects" class="active">ENGINEERING</a>
-            <a href="#" onclick="showPage('portfolio'); return false;" id="nav-portfolio">PORTFOLIO</a>
-            <a href="#" onclick="showPage('marketplace'); return false;" id="nav-marketplace">MARKETPLACE</a>
+            <a href="#" onclick="showPage('projects'); return false;" id="nav-projects" class="active"><i
+                    class="fas fa-microchip"></i> ENGINEERING</a>
+            <a href="#" onclick="showPage('portfolio'); return false;" id="nav-portfolio"><i
+                    class="fas fa-user-astronaut"></i> PORTFOLIO</a>
+            <a href="#" onclick="showPage('marketplace'); return false;" id="nav-marketplace"><i
+                    class="fas fa-rocket"></i> MARKETPLACE</a>
         </div>
     </nav>
 
